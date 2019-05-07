@@ -7,8 +7,8 @@
 //
 
 import UIKit
-
-class ViewController: UIViewController,UITableViewDataSource {
+ 
+class ViewController: UIViewController,UITableViewDataSource{
     
     @IBOutlet weak var myTableView: UITableView!
     
@@ -36,6 +36,7 @@ class ViewController: UIViewController,UITableViewDataSource {
         
         return myCell
     }
+    
 
 
 }
