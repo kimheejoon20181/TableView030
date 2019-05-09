@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--동믈농장-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TableView03" customModuleProvider="target" sceneMemberID="viewController">
@@ -55,7 +55,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="fro-zL-BAC" kind="show" identifier="" id="Uoi-dB-u3p"/>
+                                            <segue destination="fro-zL-BAC" kind="show" identifier="godetail" id="Uoi-dB-u3p"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -64,7 +64,13 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="faU-1S-f19"/>
+                    <navigationItem key="navigationItem" title="동믈농장" id="faU-1S-f19">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="6TR-z4-r6i">
+                            <connections>
+                                <segue destination="jDT-zF-cD6" kind="show" identifier="goadd" id="VO5-0k-qKQ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="myTableView" destination="UWW-Uy-0p8" id="YB0-ex-bUn"/>
                     </connections>
@@ -106,7 +112,51 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="25Z-si-h3t" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1536.8" y="133.5832083958021"/>
+            <point key="canvasLocation" x="1762" y="-242"/>
+        </scene>
+        <!--Add View Controller-->
+        <scene sceneID="ATg-6W-Cz2">
+            <objects>
+                <viewController id="jDT-zF-cD6" customClass="addViewController" customModule="TableView03" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aZd-yu-tPq">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Qdd-Hg-2Jx">
+                                <rect key="frame" x="39.5" y="173" width="296" height="321"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="321" id="5gQ-ak-8Eq"/>
+                                    <constraint firstAttribute="width" constant="296" id="Ikt-7M-zzw"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DZC-ep-BCW">
+                                <rect key="frame" x="0.0" y="538" width="375" height="72"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="72" id="DBQ-Ap-ved"/>
+                                    <constraint firstAttribute="width" constant="375" id="eii-Q1-t4P"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Qdd-Hg-2Jx" firstAttribute="top" secondItem="dgZ-xL-zDH" secondAttribute="top" constant="109" id="Pgr-SD-dfJ"/>
+                            <constraint firstItem="DZC-ep-BCW" firstAttribute="top" secondItem="Qdd-Hg-2Jx" secondAttribute="bottom" constant="44" id="RKY-ip-w4e"/>
+                            <constraint firstItem="DZC-ep-BCW" firstAttribute="centerX" secondItem="aZd-yu-tPq" secondAttribute="centerX" id="adZ-Zg-hZo"/>
+                            <constraint firstItem="Qdd-Hg-2Jx" firstAttribute="centerX" secondItem="aZd-yu-tPq" secondAttribute="centerX" id="o3m-Ue-BIR"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="dgZ-xL-zDH"/>
+                    </view>
+                    <connections>
+                        <outlet property="deData" destination="DZC-ep-BCW" id="kHb-hM-a1F"/>
+                        <outlet property="imageData" destination="Qdd-Hg-2Jx" id="jJp-LK-ItY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wSK-po-gad" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1760.8" y="553.67316341829087"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="W2C-wF-wOk">
