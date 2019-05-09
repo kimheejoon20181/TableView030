@@ -122,13 +122,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Qdd-Hg-2Jx">
-                                <rect key="frame" x="39.5" y="173" width="296" height="321"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="321" id="5gQ-ak-8Eq"/>
-                                    <constraint firstAttribute="width" constant="296" id="Ikt-7M-zzw"/>
-                                </constraints>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DZC-ep-BCW">
                                 <rect key="frame" x="0.0" y="538" width="375" height="72"/>
                                 <constraints>
@@ -139,6 +132,13 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Qdd-Hg-2Jx">
+                                <rect key="frame" x="39" y="173" width="296" height="321"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="321" id="5gQ-ak-8Eq"/>
+                                    <constraint firstAttribute="width" constant="296" id="Ikt-7M-zzw"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
