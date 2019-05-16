@@ -67,7 +67,7 @@
                     <navigationItem key="navigationItem" title="동믈농장" id="faU-1S-f19">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="6TR-z4-r6i">
                             <connections>
-                                <segue destination="jDT-zF-cD6" kind="show" identifier="goadd" id="VO5-0k-qKQ"/>
+                                <segue destination="6RH-du-9G9" kind="show" identifier="goadd" id="dPo-Oi-l65"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -109,12 +109,16 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="uBi-oM-ZKx"/>
                     </view>
+                    <connections>
+                        <outlet property="deData" destination="2NH-2I-NaS" id="1WU-1V-QtZ"/>
+                        <outlet property="imageData" destination="dev-bd-YDx" id="zTA-pD-Jyb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="25Z-si-h3t" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1762" y="-242"/>
+            <point key="canvasLocation" x="1777" y="565"/>
         </scene>
-        <!--Add View Controller-->
+        <!--새메모-->
         <scene sceneID="ATg-6W-Cz2">
             <objects>
                 <viewController id="jDT-zF-cD6" customClass="addViewController" customModule="TableView03" customModuleProvider="target" sceneMemberID="viewController">
@@ -122,41 +126,34 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DZC-ep-BCW">
-                                <rect key="frame" x="0.0" y="538" width="375" height="72"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="72" id="DBQ-Ap-ved"/>
-                                    <constraint firstAttribute="width" constant="375" id="eii-Q1-t4P"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dtf-8v-s30">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Qdd-Hg-2Jx">
-                                <rect key="frame" x="39" y="173" width="296" height="321"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="321" id="5gQ-ak-8Eq"/>
-                                    <constraint firstAttribute="width" constant="296" id="Ikt-7M-zzw"/>
-                                </constraints>
-                            </imageView>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="Qdd-Hg-2Jx" firstAttribute="top" secondItem="dgZ-xL-zDH" secondAttribute="top" constant="109" id="Pgr-SD-dfJ"/>
-                            <constraint firstItem="DZC-ep-BCW" firstAttribute="top" secondItem="Qdd-Hg-2Jx" secondAttribute="bottom" constant="44" id="RKY-ip-w4e"/>
-                            <constraint firstItem="DZC-ep-BCW" firstAttribute="centerX" secondItem="aZd-yu-tPq" secondAttribute="centerX" id="adZ-Zg-hZo"/>
-                            <constraint firstItem="Qdd-Hg-2Jx" firstAttribute="centerX" secondItem="aZd-yu-tPq" secondAttribute="centerX" id="o3m-Ue-BIR"/>
+                            <constraint firstItem="dtf-8v-s30" firstAttribute="top" secondItem="dgZ-xL-zDH" secondAttribute="top" id="BFP-iH-ucc"/>
+                            <constraint firstItem="dgZ-xL-zDH" firstAttribute="trailing" secondItem="dtf-8v-s30" secondAttribute="trailing" id="Bh5-8Y-TkE"/>
+                            <constraint firstItem="dgZ-xL-zDH" firstAttribute="bottom" secondItem="dtf-8v-s30" secondAttribute="bottom" id="cgs-cM-uqm"/>
+                            <constraint firstItem="dtf-8v-s30" firstAttribute="leading" secondItem="dgZ-xL-zDH" secondAttribute="leading" id="fX9-9v-fxC"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="dgZ-xL-zDH"/>
                     </view>
-                    <connections>
-                        <outlet property="deData" destination="DZC-ep-BCW" id="kHb-hM-a1F"/>
-                        <outlet property="imageData" destination="Qdd-Hg-2Jx" id="jJp-LK-ItY"/>
-                    </connections>
+                    <navigationItem key="navigationItem" title="새메모" id="d9h-Rm-aLm">
+                        <barButtonItem key="leftBarButtonItem" title="취소" id="itf-6g-Se4">
+                            <connections>
+                                <action selector="close:" destination="jDT-zF-cD6" id="dmc-vg-U68"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="저장" id="25K-c0-cVS"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wSK-po-gad" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1760.8" y="553.67316341829087"/>
+            <point key="canvasLocation" x="2601" y="-201"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="W2C-wF-wOk">
@@ -175,6 +172,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c6E-Qh-kxT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-14" y="134"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="q0a-gl-MfW">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="6RH-du-9G9" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="AWi-PD-Va7">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="jDT-zF-cD6" kind="relationship" relationship="rootViewController" id="FRm-ak-uo7"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HCn-w9-Beu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1777" y="-201"/>
         </scene>
     </scenes>
 </document>
